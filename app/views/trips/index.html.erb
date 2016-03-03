@@ -4,15 +4,9 @@
 <% @trips.each do |trip| %>
   <div class='card center'>
     <h3>
-      <%= link_to trip.name, trip_location_path(trip) %>
+      <%= link_to trip.name, trip_path(trip) %>
     </h3>
-    <h5>
-      Trip Location Count:
-      <%= trip.locations.count %>
-    </h5>
-    <%= link_to 'Edit', edit_trip_path(trip) %>
-    <br />
-    <%= link_to 'Delete', trip_path(trip), method: :delete, data: {confirm: 'Sure you wanna delete this trip? Looks like you had a good time.'} %>
+
   </div>
 <% end %>
 
