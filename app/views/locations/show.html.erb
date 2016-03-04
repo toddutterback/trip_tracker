@@ -1,2 +1,23 @@
-<h1>Locations#show</h1>
-<p>Find me in app/views/locations/show.html.erb</p>
+<h1><%= @trip.name %> Location</h1>
+<hr />
+
+<div class = "center">
+  <h3><%= @trip.name %></h3>
+  <p><small>Dates: <%= @trip.start_date %> through <%= @trip.end_date %></small></p>
+  <p><%= @trip.description %></p>
+  <footer> <small> <%= link_to 'Add Location', new_trip_location_path(@trip) %> </small> </footer>
+<hr />
+
+
+<footer>
+  <small>
+  <%= link_to 'Edit Trip', edit_trip_path(@trip) %>
+
+  <%= link_to 'Delete Trip', trip_path(@trip), method: :delete %>
+  </small>
+</footer>
+
+<br />
+
+<%= link_to "Back to trips", trips_path %>
+</div>

@@ -6,10 +6,10 @@
   <%= f.text_field :name %>
   <br />
   <%= f.label :start_date %>
-  <%= f.text_field :start_date %>
+  <%= f.text_field :start_date, placeholder: 'DD/MM/YYYY' %>
   <br />
   <%= f.label :end_date %>
-  <%= f.text_field :end_date %>
+  <%= f.text_field :end_date, placeholder: 'DD/MM/YYYY' %>
   <br />
   <%= f.label :description%>
   <%= f.text_field :description %>
@@ -17,3 +17,4 @@
   <%= f.submit %>
 <% end %>
 
+<%= link_to "Back to trips", trips_path %>

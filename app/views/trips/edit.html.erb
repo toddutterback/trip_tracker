@@ -1,2 +1,20 @@
-<h1>Trips#edit</h1>
-<p>Find me in app/views/trips/edit.html.erb</p>
+<h1>Edit <%= @trip.name %> Trip</h1>
+<hr />
+
+<%= form_for @trip do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br />
+  <%= f.label :start_date %>
+  <%= f.text_field :start_date, placeholder: 'DD/MM/YYYY' %>
+  <br />
+  <%= f.label :end_date %>
+  <%= f.text_field :end_date, placeholder: 'DD/MM/YYYY' %>
+  <br />
+  <%= f.label :description%>
+  <%= f.text_field :description %>
+  <br />
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to trips", trips_path %>

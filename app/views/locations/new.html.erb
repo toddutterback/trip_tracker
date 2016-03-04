@@ -1,2 +1,13 @@
-<h1>Locations#new</h1>
-<p>Find me in app/views/locations/new.html.erb</p>
+<h1> New Location for <%= @trip.name %> trip</h1>
+<hr />
+
+<%= form_for [@trip, @location] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>
+
+<hr />
+
+<%= link_to "Back to trips", trips_path %>
